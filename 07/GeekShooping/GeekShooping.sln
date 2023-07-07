@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FroneEnd", "FroneEnd", "{0F005C2F-AAE8-459B-BE61-6E95471A998C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{BE599FB6-B6D3-4FBC-8160-912B182D510E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekShooping.Web", "GeekShooping.Web\GeekShooping.Web.csproj", "{E9BD7CC7-04F5-4D4A-B744-F7FF58300D8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekShooping.ProductAPI", "GeekShooping.API\GeekShooping.ProductAPI.csproj", "{AD22FD33-B987-4DF4-9BF8-1B9CDCE237A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekShooping.New.Web", "GeekShooping.New.Web\GeekShooping.New.Web.csproj", "{48CDF5B3-0BBE-431D-BBE5-D93A6EE7138B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{1ED8A6DD-4C67-4F83-8B5B-FE3F2F0D2A58}"
+	ProjectSection(SolutionItems) = preProject
+		redmed.txt = redmed.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E9BD7CC7-04F5-4D4A-B744-F7FF58300D8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9BD7CC7-04F5-4D4A-B744-F7FF58300D8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9BD7CC7-04F5-4D4A-B744-F7FF58300D8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9BD7CC7-04F5-4D4A-B744-F7FF58300D8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD22FD33-B987-4DF4-9BF8-1B9CDCE237A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD22FD33-B987-4DF4-9BF8-1B9CDCE237A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD22FD33-B987-4DF4-9BF8-1B9CDCE237A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD22FD33-B987-4DF4-9BF8-1B9CDCE237A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48CDF5B3-0BBE-431D-BBE5-D93A6EE7138B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48CDF5B3-0BBE-431D-BBE5-D93A6EE7138B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48CDF5B3-0BBE-431D-BBE5-D93A6EE7138B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48CDF5B3-0BBE-431D-BBE5-D93A6EE7138B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E9BD7CC7-04F5-4D4A-B744-F7FF58300D8A} = {0F005C2F-AAE8-459B-BE61-6E95471A998C}
+		{AD22FD33-B987-4DF4-9BF8-1B9CDCE237A4} = {BE599FB6-B6D3-4FBC-8160-912B182D510E}
+		{48CDF5B3-0BBE-431D-BBE5-D93A6EE7138B} = {0F005C2F-AAE8-459B-BE61-6E95471A998C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FCD0FAFC-A6CE-455B-AF65-2553C95FCF83}
+	EndGlobalSection
+EndGlobal

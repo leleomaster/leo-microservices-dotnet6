@@ -1,0 +1,36 @@
+1 - Para criar o banco de dados(sql server, my sql, plsql,...)
+	
+	1.1 - Criar a estrutura de código
+		1.1.1 - Class MyContext: ela contém uma herança da classe base/default(DbContext) do entityframework core e a 
+				definição/configuração das classes/tables.
+	
+	1.2 - Criar as classes/tables com data annotation para definição/configuração o tamanho de uma string, o range, 
+		  o nome da coluna, a key(id) foreign Key,...
+
+	1.3 - Criar, recomendável, uma class baseEntity onde vai conter a propriedade id(key) e outras se precisar.
+		  Vai ser herdado por todas as classes.
+
+	1.4 - Fazer a inserção no pipeline do projeto na class program.cs incluindo o código 
+		  builder.Services.AddDbContext<MySqlContext>
+     	  (
+		     options => options.UseMySql(connection, new MySqlServerVersion(new Version(8, 0, 33)))
+		  );
+	
+	1.5 - Agora configurar o banco no appsettings.json com o código   
+		  "MySqlConnection": {
+			"MySqlConectionString": "Server=localhost;DataBase=geek_shopping_product_api;Uid=root;Pwd=49078535"
+	  	  }
+	
+	1.6 -  Fazer a inserção no pipeline do projeto na class program.cs incluindo o código
+		   var connection = builder.Configuration["MySqlConnection:MySqlConectionString"];
+
+			builder.Services.AddDbContext<MySqlContext>
+			(
+				options => options.UseMySql(connection, new MySqlServerVersion(new Version(8, 0, 33)))
+			);
+
+	1.7 - Agora rodar o comando na "lina de comando": dotnet ef migrations add nomeQueVoceQuerDarPraMigration.
+		  Quando terminar vai gerar as tabelas no banco de dados do item 1.5
+
+	1.8 - Rodar o comando dotnet ef database update quando você criar/atualizar/deletar alguma class e/ou propriedade da class.
+		  Isso vai gerar uma nova migration e atualizar o banco de dados conforme as classes estão. :)
