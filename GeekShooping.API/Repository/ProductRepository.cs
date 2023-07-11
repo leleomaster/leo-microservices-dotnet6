@@ -19,14 +19,14 @@ namespace GeekShooping.ProductAPI.Repository
 
         public async Task<IEnumerable<ProductVO>> FindAll()
         {
-            var products = await _mySqlContext.Products.ToListAsync();
+            var products = await _mySqlContext.Products.ToListAsync() ?? new List<Product>();
 
             return _mapper.Map<List<ProductVO>>(products);
         }
 
         public async Task<ProductVO> FindById(long id)
         {
-            var product = await _mySqlContext.Products.FirstOrDefaultAsync(p => p.Id == id);
+            var product = await _mySqlContext.Products.FirstOrDefaultAsync(p => p.Id == id) ?? new Product();
 
             return _mapper.Map<ProductVO>(product);
         }
@@ -55,11 +55,14 @@ namespace GeekShooping.ProductAPI.Repository
         {
             try
             {
-                var product = await _mySqlContext.Products.FirstOrDefaultAsync(p => p.Id == id);
+                var product = await _mySqlContext.Products.FirstOrDefaultAsync(p => p.Id == id) ?? new Product();
 
-                if (product == null) return false;
+                if (product.Id <= 0) return false;
 
                 _mySqlContext.Products.Remove(product);
+
+                await _mySqlContext.SaveChangesAsync();
+
                 return true;
             }
             catch (Exception)
