@@ -1,3 +1,9 @@
+Erros:
+	1 - Caso de o erro de https executar o seguintes passos.
+	a - dotnet dev-certs https --clean
+	b - dotnet dev-certs https --trust
+	c - Restart VS
+
 1 - Para criar o banco de dados(sql server, my sql, plsql,...)
 	
 	1.1 - Criar a estrutura de código

@@ -34,7 +34,7 @@ namespace GeekShooping.New.Web.Services.Utils
 
             content.Headers.ContentType = contentType;
 
-            return httpClient.PutAsJson(url, content);
+            return httpClient.PutAsync(url, content);
         }
 
     }
